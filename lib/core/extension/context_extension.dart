@@ -9,12 +9,14 @@ extension MediaQueryExtension on BuildContext {
   double get width => mediaQuery.size.width;
 
   double get lowValue => height * 0.01;
+  double get lowPlus => height * 0.015;
   double get normalValue => height * 0.02;
+  double get normalPlus => height * 0.035;
   double get mediumValue => height * 0.05;
+  double get mediumPlusValue => height * 0.08;
   double get highValue => height * 0.1;
-
-  double dynamicHeight(double val) => height * val;
-  double dynamicWidth(double val) => width * val;
+  double get highPlusValue => height * 0.15;
+  double get ultraHighValue => height * 0.2;
 }
 
 extension EmptySpaceExtension on BuildContext {

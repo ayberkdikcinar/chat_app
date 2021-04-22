@@ -6,15 +6,11 @@ class TextFieldMessage extends StatelessWidget {
   final IconData? prefixIcon;
   final IconData? suffixIcon;
   final String? hintText;
+  final Function(String? val) onChanged;
 
-  const TextFieldMessage({
-    Key? key,
-    required this.borderRadius,
-    this.backgrounColor = Colors.white,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.hintText,
-  }) : super(key: key);
+  const TextFieldMessage(
+      {Key? key, required this.borderRadius, this.backgrounColor = Colors.white, this.prefixIcon, this.suffixIcon, this.hintText, required this.onChanged})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +22,7 @@ class TextFieldMessage extends StatelessWidget {
           prefixIcon: Icon(prefixIcon),
           suffixIcon: Icon(suffixIcon),
           hintText: hintText),
+      onChanged: (value) => onChanged(value),
     );
   }
 }

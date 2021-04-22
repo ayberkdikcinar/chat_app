@@ -1,0 +1,12 @@
+{   "app_title":"Material App",
+    "app_name":"Chatttelr",
+    "activity":"Activity",
+    "messages":"Messages",
+    "hour_abbreviation":" hours",
+    "second_abbreviation":" sec",
+    "minute_abbreviation":" min",
+    "day_abbreviation":" days",
+    "not_found":"NOT FOUND",
+    "status":"status",
+    "number":"1"
+}

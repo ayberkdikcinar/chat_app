@@ -1,5 +1,6 @@
-import 'package:chat_app/core/extension/context_extension.dart';
 import 'package:flutter/material.dart';
+
+import '../../extension/context_extension.dart';
 
 class TextButtonSend extends StatelessWidget {
   final VoidCallback onPressed;
@@ -16,12 +17,14 @@ class TextButtonSend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => onPressed,
+      onPressed: () => onPressed(),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(color),
         shape: MaterialStateProperty.all(CircleBorder()),
       ),
-      child: Icon(icon, color: context.theme.highlightColor),
+      child: buildIcon(context),
     );
   }
+
+  Icon buildIcon(BuildContext context) => Icon(icon, color: context.theme.highlightColor);
 }
