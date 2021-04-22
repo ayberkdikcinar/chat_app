@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: LocaleKeys.app_title.tr(),
       home: DefaulTabView(),
       theme: LightTheme.instance.themeData,
